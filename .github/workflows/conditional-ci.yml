@@ -16,8 +16,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     needs: build
-    if: startsWith(github.ref, 'refs/heads/feature/') && success()
-	
+    if: startsWith(github.ref, 'refs/heads/feature/')
+    
     steps:
       - name: Test Step
         run: echo "This is test job"
+
